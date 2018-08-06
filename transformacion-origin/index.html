@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Transicion Punto Origen</title>
+    <style>
+      body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        color: white;
+        font-family: Arial;
+        perspective: 200px;
+        perspective-origin: center;
+        /* perspective-origin: x y; */
+        /* perspective-origin: top; */
+        /* perspective-origin: bottom; */
+        /* perspective-origin: left; */
+        /* perspective-origin: right; */
+        /* perspective-origin: top right; */
+      }
+      .container{
+        border: 1px solid red;
+      }
+      .container:hover .cuadrado{
+        transform-origin: left top;
+        transform: rotateZ(45deg)
+      }
+      .cuadrado{
+        width: 200px;
+        height: 200px;
+        background: #7dc900;
+        margin: 20px;
+        transition: .3s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="cuadrado">
+        Hola Mundo!
+      </div>
+    </div>
+  </body>
+</html>

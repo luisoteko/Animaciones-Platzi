@@ -1,0 +1,52 @@
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: white;
+  font-family: Arial;
+  perspective: 200px;
+  perspective-origin: center;
+  /* perspective-origin: x y; */
+  /* perspective-origin: top; */
+  /* perspective-origin: left; */
+  /* perspective-origin: right; */
+  /* perspective-origin: top right; */
+  /* perspective-origin: bottom; */
+  }
+.container{
+  border: 1px solid red;
+  width: 100%;
+}
+.container:hover .cuadrado{
+  animation-play-state: paused
+}
+.cuadrado{
+  width: 200px;
+  height: 200px;
+  background: #7dc900;
+  margin: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* transition: .3s; */
+  animation-name: cuadrado;
+  /* animation-delay: 1s; */
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(.75, -.31, .33, 1.4);
+  animation-direction: alternate;
+  /* animation-fill-mode: forwards;  */
+  animation-duration: 1s;
+  position: relative;
+}
+@keyframes cuadrado {
+  0% {
+    /* opacity: 1; */
+    left: 0;
+  }
+  100% {
+    left: calc(100% - 240px);
+  /* opacity: 0; */
+  }
+}
